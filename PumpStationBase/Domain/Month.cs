@@ -8,12 +8,11 @@ namespace PumpStationBase.Domain
         public Month()
         {
             this.Cottagers = new List<Cottager>();
-            this.Statements = new List<Statement>();
         }
 
         public int Id { get; set; }
         public string MonthName { get; set; }
         public virtual ICollection<Cottager> Cottagers { get; set; }
-        public virtual ICollection<Statement> Statements { get; set; }
+        public virtual Statement Statement { get; set; }
     }
 }

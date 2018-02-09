@@ -18,13 +18,7 @@ namespace PumpStationBase.Models.Mapping
             // Table & Column Mappings
             this.ToTable("Statement");
             this.Property(t => t.Id).HasColumnName("Id");
-            this.Property(t => t.MonthId).HasColumnName("MonthId");
             this.Property(t => t.Value).HasColumnName("Value");
-
-            // Relationships
-            this.HasRequired(t => t.Month)
-                .WithMany(t => t.Statements)
-                .HasForeignKey(d => d.MonthId);
 
         }
     }

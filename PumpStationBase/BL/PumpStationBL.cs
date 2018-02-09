@@ -24,8 +24,6 @@ namespace PumpStationBase.BL
 
             garden.Id = _UnitOfWork.GardenDAO.GetNextId();
 
-            cottager.GardenId = garden.Id;
-            
             _UnitOfWork.CottagerDAO.create(cottager);
         }
 

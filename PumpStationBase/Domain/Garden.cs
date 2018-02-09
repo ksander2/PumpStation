@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PumpStationBase.Domain
 {
@@ -7,11 +9,15 @@ namespace PumpStationBase.Domain
     {
         public Garden()
         {
-            this.Cottagers = new List<Cottager>();
+
         }
 
+        [Key]
+        [ForeignKey("Cottager")]
         public int Id { get; set; }
         public int Square { get; set; }
-        public virtual ICollection<Cottager> Cottagers { get; set; }
+        
+        public virtual Cottager Cottager { get; set; }
     }
 }
+

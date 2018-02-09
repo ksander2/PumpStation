@@ -31,7 +31,7 @@ namespace PumpStationView.ViewModel
             _instanceWindow = view;
             _UnitOfWork = UnitOfWork;
             _statementList = _UnitOfWork.StatementDAO.getAll().ToList();
-            CurentStatement = _statementList.Where(x => x.MonthId == _selectedMonthId).FirstOrDefault();
+            CurentStatement = _statementList.Where(x => x.Id == _selectedMonthId).FirstOrDefault();
         }
         
         public int SelectedMonthId 
@@ -44,7 +44,7 @@ namespace PumpStationView.ViewModel
             {
                 _selectedMonthId = value;
                 OnPropertyChanged("SelectedMonthId");
-                CurentStatement = _statementList.Where(x => x.MonthId == _selectedMonthId).FirstOrDefault();
+                CurentStatement = _statementList.Where(x => x.Id == _selectedMonthId).FirstOrDefault();
             }
         }
         public Statement CurentStatement

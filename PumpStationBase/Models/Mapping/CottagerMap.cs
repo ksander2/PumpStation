@@ -24,12 +24,9 @@ namespace PumpStationBase.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.MonthId).HasColumnName("MonthId");
             this.Property(t => t.Name).HasColumnName("Name");
-            this.Property(t => t.GardenId).HasColumnName("GardenId");
+     
 
             // Relationships
-            this.HasRequired(t => t.Garden)
-                .WithMany(t => t.Cottagers)
-                .HasForeignKey(d => d.GardenId);
             this.HasRequired(t => t.Month)
                 .WithMany(t => t.Cottagers)
                 .HasForeignKey(d => d.MonthId);

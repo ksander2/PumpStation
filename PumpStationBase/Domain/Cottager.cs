@@ -19,8 +19,6 @@ namespace PumpStationBase.Domain
         [StringLength(100)]
         public string Name { get; set; }
 
-        public int GardenId { get; set; }
-
         public virtual Garden Garden { get; set; }
 
         public virtual Month Month { get; set; }

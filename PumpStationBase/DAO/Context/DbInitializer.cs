@@ -28,7 +28,7 @@ namespace PumpStationBase.DAO
 
             for (int i = 0; i < 12; i++)
             {
-                context.Statements.Add(new Statement { Id = i, MonthId = i });
+                context.Statements.Add(new Statement { Id = i });
             }
 
             context.Tariffs.Add(new Tariff { Id = 0, TariffPrice=0 });

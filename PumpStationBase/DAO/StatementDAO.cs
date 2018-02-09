@@ -26,7 +26,7 @@ namespace PumpStationBase.DAO
 
         public Statement GetStatementByMonthId(int MonthId)
         {
-            return _context.Statements.Where(x => x.MonthId == MonthId).FirstOrDefault();
+            return _context.Statements.Where(x => x.Id == MonthId).FirstOrDefault();
         }
 
         protected override void deleteItem(Statement item)
